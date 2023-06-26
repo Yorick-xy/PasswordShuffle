@@ -36,11 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNbCaract = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(233, 367);
+            this.buttonGenerate.Location = new System.Drawing.Point(318, 401);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(134, 58);
             this.buttonGenerate.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             this.checkBoxLetters.AutoSize = true;
             this.checkBoxLetters.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxLetters.Location = new System.Drawing.Point(106, 228);
+            this.checkBoxLetters.Location = new System.Drawing.Point(191, 262);
             this.checkBoxLetters.Name = "checkBoxLetters";
             this.checkBoxLetters.Size = new System.Drawing.Size(96, 32);
             this.checkBoxLetters.TabIndex = 1;
@@ -63,7 +64,7 @@
             // 
             this.checkBoxNumbers.AutoSize = true;
             this.checkBoxNumbers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxNumbers.Location = new System.Drawing.Point(249, 228);
+            this.checkBoxNumbers.Location = new System.Drawing.Point(334, 262);
             this.checkBoxNumbers.Name = "checkBoxNumbers";
             this.checkBoxNumbers.Size = new System.Drawing.Size(104, 32);
             this.checkBoxNumbers.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             this.checkBoxCaract.AutoSize = true;
             this.checkBoxCaract.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxCaract.Location = new System.Drawing.Point(106, 293);
+            this.checkBoxCaract.Location = new System.Drawing.Point(191, 327);
             this.checkBoxCaract.Name = "checkBoxCaract";
             this.checkBoxCaract.Size = new System.Drawing.Size(211, 32);
             this.checkBoxCaract.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(106, 106);
+            this.label1.Location = new System.Drawing.Point(191, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 28);
             this.label1.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(102, 485);
+            this.label2.Location = new System.Drawing.Point(23, 493);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 28);
             this.label2.TabIndex = 5;
@@ -103,7 +104,8 @@
             // 
             // textBoxNbCaract
             // 
-            this.textBoxNbCaract.Location = new System.Drawing.Point(117, 137);
+            this.textBoxNbCaract.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNbCaract.Location = new System.Drawing.Point(202, 171);
             this.textBoxNbCaract.Multiline = true;
             this.textBoxNbCaract.Name = "textBoxNbCaract";
             this.textBoxNbCaract.Size = new System.Drawing.Size(376, 44);
@@ -111,17 +113,30 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(52, 534);
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassword.Location = new System.Drawing.Point(23, 534);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(529, 44);
+            this.textBoxPassword.Size = new System.Drawing.Size(724, 44);
             this.textBoxPassword.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(234, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 38);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Password Generator";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 625);
+            this.ClientSize = new System.Drawing.Size(782, 625);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxNbCaract);
             this.Controls.Add(this.label2);
@@ -130,8 +145,13 @@
             this.Controls.Add(this.checkBoxNumbers);
             this.Controls.Add(this.checkBoxLetters);
             this.Controls.Add(this.buttonGenerate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Password Generator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +167,6 @@
         private Label label2;
         private TextBox textBoxNbCaract;
         private TextBox textBoxPassword;
+        private Label label3;
     }
 }

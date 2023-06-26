@@ -26,7 +26,7 @@ namespace PasswordShuffle
 
         private string GenerateRandomPassword(int length)
         {
-            const string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            const string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&~#{[-|_@])}=+<>,;:/!§*$.";
             StringBuilder password = new StringBuilder();
 
             Random random = new Random();
@@ -38,6 +38,11 @@ namespace PasswordShuffle
             }
 
             return password.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
