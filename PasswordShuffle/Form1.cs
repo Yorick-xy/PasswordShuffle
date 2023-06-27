@@ -6,6 +6,10 @@ namespace PasswordShuffle
 {
     public partial class Form1 : Form
     {
+        private const string lettersLower = "abcdefghijklmnopqrstuvwxyz";
+        private const string lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string numbers = "1234567890";
+        private const string specialChars = "!@#$%^&*()";
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +30,25 @@ namespace PasswordShuffle
 
         private string GenerateRandomPassword(int length)
         {
-            const string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&~#{[-|_@])}=+<>,;:/!§*$.";
             StringBuilder password = new StringBuilder();
-
             Random random = new Random();
+
+            string allowedChars = "";
+
+            if (checkBoxLetters.Checked)
+                allowedChars += lettersLower + lettersUpper;
+
+            if (checkBoxNumbers.Checked)
+                allowedChars += numbers;
+
+            if (checkBoxCaract.Checked)
+                allowedChars += specialChars;
+
+            if (allowedChars.Length == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner au moins une option pour la génération du mot de passe !");
+                return string.Empty;
+            }
 
             for (int i = 0; i < length; i++)
             {
@@ -39,6 +58,8 @@ namespace PasswordShuffle
 
             return password.ToString();
         }
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
